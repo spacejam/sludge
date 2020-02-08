@@ -1,0 +1,31 @@
+[package]
+name = "sludge"
+version = "0.0.0"
+authors = ["Tyler Neely <t@jujit.su>"]
+edition = "2018"
+description = "sled + io_uring + SIMD web microframework"
+license = "GPL-3.0"
+homepage = "https://github.com/spacejam/sludge"
+repository = "https://github.com/spacejam/sludge"
+keywords = ["networking", "io-uring", "io_uring", "uring", "io"]
+categories = ["asynchronous", "concurrency", "filesystem", "network-programming", "os"]
+documentation = "https://docs.rs/sludge/"
+readme = "README.md"
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[profile.release]
+debug = true
+
+[profile.dev]
+debug = true
+
+[dependencies]
+libc = "0.2.66"
+extreme = "*"
+sled = "*"
+rio = "*"
+
+[features]
+no_metrics = []
